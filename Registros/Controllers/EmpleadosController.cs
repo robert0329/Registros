@@ -20,7 +20,6 @@ namespace Registros.Controllers
         {
             return View(db.Empleado.ToList());
         }
-
         // GET: Empleados/Details/5
         public ActionResult Details(int? id)
         {
