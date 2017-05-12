@@ -16,6 +16,6 @@ namespace Registros.DAL
 
         public System.Data.Entity.DbSet<Registros.Models.Clientes> Clientes { get; set; }
 
-        public System.Data.Entity.DbSet<Registros.Models.Empledos> Empledos { get; set; }
+        public System.Data.Entity.DbSet<Registros.Models.Empleados> Empleado { get; set; }
     }
 }

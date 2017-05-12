@@ -13,18 +13,19 @@ namespace Registros.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Empleados()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Your Employes page.";
+
+            return View();
+        }
+        public ActionResult Clientes()
+        {
+            ViewBag.Message = "Your client page.";
 
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
     }
 }
