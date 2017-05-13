@@ -24,7 +24,7 @@ namespace Registros
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/Solar.css",
                       "~/Content/site.css"));
         }
     }

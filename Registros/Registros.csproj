@@ -168,6 +168,7 @@
     <Content Include="App_Data\BeautyBaseDb_log.ldf">
       <DependentUpon>BeautyBaseDb.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\Solar.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
