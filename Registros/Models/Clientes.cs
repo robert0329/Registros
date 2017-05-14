@@ -11,27 +11,32 @@ namespace Registros.Models
         [Key]
 
         public int ClienteID { get; set; }
+
+        [StringLength(100)]
+        [RegularExpression("^([a-zA-Z .&']+)$", ErrorMessage = "Solo se puede escribir letras")]
         [Required(ErrorMessage = "Debe ingresar un nombre")]
-        [StringLength(50)]
-        [RegularExpression(@"^[zA-Z]([a-zA-Z])")]
         public string Nombre { get; set; }
 
-        [Required(ErrorMessage = "Debe ingresar una telefono")]
         [StringLength(100)]
+        [RegularExpression("^([0-9.&-]+)$", ErrorMessage = "Solo se puede escribir numeros")]
+        [Required(ErrorMessage = "Debe ingresar una telefono")]
         public string Telefono { get; set; }
 
-        [Required(ErrorMessage = "Debe ingresar una direccion")]
         [StringLength(100)]
+        [RegularExpression("^([a-zA-Z0-9 .&'-]+)$", ErrorMessage = "Contiene caracteres Invalidos")]
+        [Required(ErrorMessage = "Debe ingresar una direccion")]
         public string Direccion { get; set; }
 
         public DateTime FechaNacimiento { get; set; }
 
-        [Required(ErrorMessage = "Debe ingresar un email")]
         [StringLength(100)]
+        [RegularExpression("^([a-zA-Z0-9.&'@.&'-]+)$", ErrorMessage = "Contiene caracteres Invalidos")]
+        [Required(ErrorMessage = "Debe ingresar un email")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Debe ingresar una cedula")]
         [StringLength(100)]
+        [RegularExpression("^([0-9.&-]+)$", ErrorMessage = "Solo se puede escribir numeros")]
+        [Required(ErrorMessage = "Debe ingresar una cedula")]
         public string Cedula { get; set; }
     }
 }
