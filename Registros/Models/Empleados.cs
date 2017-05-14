@@ -30,7 +30,7 @@ namespace Registros.Models
         public string Telefono { get; set; }
 
         [StringLength(100)]
-        [RegularExpression("^([a-zA-Z0-9 .&'-]+)$", ErrorMessage = "Contiene caracteres Invalidos")]
+        [RegularExpression("^([a-zA-Z0-9 .&'-.&'#]+)$", ErrorMessage = "Contiene caracteres Invalidos")]
         [Required(ErrorMessage = "Debe ingresar una direccion")]
         public string Direccion { get; set; }
 
