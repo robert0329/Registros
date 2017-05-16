@@ -12,6 +12,7 @@ namespace Registros.Models
 
         public int ClienteID { get; set; }
 
+        //klk con klk
         [StringLength(100)]
         [RegularExpression("^([a-zA-Z .&']+)$", ErrorMessage = "Solo se puede escribir letras")]
         [Required(ErrorMessage = "Debe ingresar un nombre")]
