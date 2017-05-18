@@ -18,7 +18,7 @@ namespace Registros.Controllers
         // GET: Clientes
         public ActionResult Index()
         {
-            return View(db.Clientes.ToList());
+            return View(db.Cliente.ToList());
         }
 
         // GET: Clientes/Details/5
@@ -28,7 +28,7 @@ namespace Registros.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Clientes clientes = db.Clientes.Find(id);
+            Clientes clientes = db.Cliente.Find(id);
             if (clientes == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace Registros.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Clientes.Add(clientes);
+                db.Cliente.Add(clientes);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace Registros.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Clientes clientes = db.Clientes.Find(id);
+            Clientes clientes = db.Cliente.Find(id);
             if (clientes == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace Registros.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Clientes clientes = db.Clientes.Find(id);
+            Clientes clientes = db.Cliente.Find(id);
             if (clientes == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace Registros.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Clientes clientes = db.Clientes.Find(id);
-            db.Clientes.Remove(clientes);
+            Clientes clientes = db.Cliente.Find(id);
+            db.Cliente.Remove(clientes);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
