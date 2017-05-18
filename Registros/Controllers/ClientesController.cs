@@ -39,8 +39,6 @@ namespace Registros.Controllers
         // GET: Clientes/Create
         public ActionResult Create()
         {
-
-            ViewData["esto"] = "Nombre";
             return View();
         }
 
